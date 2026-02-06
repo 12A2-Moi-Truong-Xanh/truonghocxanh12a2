@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường Học Xanh - Vì Một Tương Lai Bền Vững</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #4a4a4a;
+            /* Màu xám đậm */
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #2d5a27;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 2rem 0;
+        }
+
+        h2.section-title {
+            text-align: center;
+            color: #2d5a27;
+            margin-bottom: 30px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f4fdf4;
+            border-radius: 12px;
+            overflow: hidden;
+            border-bottom: 5px solid #4CAF50;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #2d5a27;
+        }
+
+        .card-content p {
+            color: #4a4a4a;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        /* Cập nhật style cho Read More là Hyperlink */
+        .read-more {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: 0.3s;
+            text-decoration: none;
+            /* Bỏ gạch chân mặc định */
+        }
+
+        .read-more:hover {
+            color: #2d5a27;
+            text-decoration: underline;
+        }
+
+        #contact .section-title {
+            color: #2d5a27;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2d5a27;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #45a049;
+        }
+
+        footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h2>🌿 GreenSchool</h2>
+        </div>
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#knowledge">Góc kiến thức</a>
+            <a href="#initiatives">Sáng kiến</a>
+            <a href="#news">Tin tức & Sự kiện</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Xây Dựng Ý Thức - Kiến Tạo Tương Lai</h1>
+        <p>Cùng nhau xây dựng một môi trường học tập xanh, sạch và bền vững.</p>
+        <br>
+        <a href="#knowledge" class="btn">Bắt đầu ngay</a>
+    </section>
+
+    <div class="container">
+
+        <section id="knowledge">
+            <h2 class="section-title">Góc Kiến Thức</h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <img src="https://scontent.fsgn19-1.fna.fbcdn.net/v/t1.15752-9/622594576_1573141640579873_6537397620639241828_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=mIPCpQt18aAQ7kNvwFHU_vN&_nc_oc=AdnRJRCswcm5wJ1bl8GfW-2gEu_3ofkel0WacX76JQdlL94r-SlJmIzH_f9Ty9ytzWRPkSk4kfc5wsRqlbkZIq3X&_nc_zt=23&_nc_ht=scontent.fsgn19-1.fna&oh=03_Q7cD4gEOp-0DX8rG3MUGCmz5EORQAwLrvwzmCDDfBAQGm6WjFg&oe=69AC2630" alt="Trường học xanh" class="card-img">
+                    <div class="card-content">
+                        <h3>🏫 Trường học xanh</h3>
+                        <p>Trường học xanh (Green School) là mô hình giáo dục bền vững, tích hợp các yếu tố thân thiện
+                            với môi trường vào cơ sở vật chất, chương trình giảng dạy và hoạt động vận hành.</p>
+                        <a href="greenschool.html" class="read-more">Tìm hiểu thêm →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ila.edu.vn/wp-content/uploads/2024/08/Thiet-ke-chua-co-ten-1.png" alt="Lợi ích" class="card-img">
+                    <div class="card-content">
+                        <h3>👍 Lợi ích của trường học xanh</h3>
+                        <p>Trường học xanh mang lại lợi ích toàn diện: cải thiện sức khỏe học sinh/giáo viên nhờ không
+                            khí trong lành, giảm 20% khí thải carbon, nâng cao tư duy sáng tạo qua không gian mở, và
+                            hình thành ý thức bảo vệ môi trường bền vững.
+                        </p>
+                        <a href="greenschool.html">Tìm hiểu thêm →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/561887990_1145643847543245_1376041567846187268_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KfTTZXwM-JIQ7kNvwG6Nl-W&_nc_oc=Adlc66uMt50qKoXuHGa_DfoVMSP9hzTkFPC8zvHulU4EJvkfrrchDW-YExtglPWh6cioNwUkOgCwhrbyQurWlwLo&_nc_zt=23&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=ACK9917s-b6YHGz7PvebaA&oh=00_AfvJOqpLZPmrN9WLq7wN6-s3AA1AQ47RezXPKCfSGflr2g&oe=698A8432" alt="Rác thải nhựa" class="card-img">
+                    <div class="card-content">
+                        <h3>🪴 Thói quen sống xanh</h3>
+                        <p>Thói quen sống xanh là lối sống bền vững, thân thiện với môi trường, ưu tiên bảo vệ tài
+                            nguyên thiên nhiên và giảm thiểu tác động tiêu cực đến Trái đất thông qua các hoạt động hàng
+                            ngày. Nó bao gồm việc giảm rác thải, tái chế, tiết kiệm năng lượng, nước và tiêu dùng thông
+                            minh.</p>
+                        <a href="greenschool.html">Tìm hiểu thêm →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="initiatives" style="margin-top: 60px;">
+            <h2 class="section-title">Sáng Kiến Xanh</h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=500&q=80" alt="Tái chế" class="card-img">
+                    <div class="card-content">
+                        <h3>♻️ Tái chế rác thải</h3>
+                        <p>Tái chế rác thải là quá trình thu gom, phân loại và xử lý các vật liệu đã qua sử dụng (nhựa,
+                            giấy, kim loại, thủy tinh) thành nguyên liệu hoặc sản phẩm mới, giúp giảm thiểu ô nhiễm môi
+                            trường, tiết kiệm tài nguyên thiên nhiên và năng lượng. Đây là hoạt động cốt lõi của kinh tế
+                            tuần hoàn, chuyển hóa rác thành tài nguyên, hạn chế chôn lấp.</p>
+                        <a href="tai-che-rac-thai.html">Xem sáng kiến →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://bqn.1cdn.vn/2022/07/06/images.baoquangnam.vn-storage-newsportal-2022-7-5-129222-_tnb-52867-01.jpg" alt="Trồng cây" class="card-img">
+                    <div class="card-content">
+                        <h3>🌳 Phủ xanh lớp học</h3>
+                        <p>Phủ xanh lớp học là mô hình giáo dục thực tế, biến không gian học tập thành khu vườn nhỏ
+                            thông qua việc trồng cây, tái chế chai lọ làm chậu cây và trang trí, giúp tạo môi trường
+                            trong lành, rèn luyện kỹ năng làm việc nhóm và ý thức bảo vệ môi trường. Hoạt động này tạo
+                            không gian xanh - sạch - đẹp, giảm căng thẳng và tăng cảm hứng học tập.</p>
+                        <a href="https://baodanang.vn/lop-hoc-xanh-3005436.html" target="_sefl" class="read-more">Xem sáng kiến →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=500&q=80" alt="Năng lượng" class="card-img">
+                    <div class="card-content">
+                        <h3>💡 Tiết kiệm điện</h3>
+                        <p>Tiết kiệm điện trong trường học là hành động cấp thiết, bao gồm việc tắt đèn, quạt, máy chiếu
+                            khi ra khỏi lớp, tận dụng ánh sáng và gió tự nhiên, cũng như bảo dưỡng thiết bị định kỳ</p>
+                        <a href="https://icon.com.vn/d6/vi-VN/news/Cac-bien-phap-tiet-kiem-dien-trong-truong-hoc-61-701-203457" target="_sefl" class="read-more">Xem sáng kiến →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" style="margin-top: 60px;">
+            <h2 class="section-title">Tin Tức & Sự Kiện</h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <img src="https://image.luatvietnam.vn/uploaded/twebp/images/original/2023/12/03/gio-trai-dat_0312195821.jpg" alt="Giờ Trái Đất" class="card-img">
+                    <div class="card-content">
+                        <h3>🌏 Giờ Trái Đất"</h3>
+                        <p>Giờ Trái Đất (Earth Hour) là sự kiện quốc tế thường niên do Quỹ Quốc tế Bảo vệ Thiên nhiên
+                            (WWF) khởi xướng, kêu gọi tắt đèn và các thiết bị điện không cần thiết trong 60 phút
+                            (20h30-21h30 giờ địa phương) vào thứ Bảy cuối cùng của tháng 3. Sự kiện nâng cao nhận thức
+                            về biến đổi khí hậu và tiết kiệm năng lượng. Năm 2025, sự kiện diễn ra vào ngày 22/3 với
+                            thông điệp "Chuyển dịch xanh - Tương lai xanh".</p>
+                        <a href="https://vi.wikipedia.org/wiki/Gi%E1%BB%9D_Tr%C3%A1i_%C4%90%E1%BA%A5t" target="_sefl"
+                            class="read-more">Đọc tin tức →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://lh4.googleusercontent.com/proxy/2vvj-wmlC7w2FEbTTbZ_KO05UpgcFNM5eIea2Z3mndpriQc2EgDtn46hsZ3Mq4kmrPjratBY7JwbjNDK0MSSkZX0QFlRaz-ms2A2Ng" alt="Đổi rác thải lấy cây xanh" class="card-img">
+                    <div class="card-content">
+                        <h3>🌱 Mô hình "Đổi rác thải nhựa lấy cây xanh"</h3>
+                        <p>Mô hình "Đổi rác thải nhựa lấy cây xanh" là hoạt động thiết thực, khuyến khích người dân thu
+                            gom, phân loại nhựa tại
+                            nguồn (chai lọ, túi ni lông) để đổi lấy các chậu cây xanh mini, nhằm nâng cao nhận thức bảo
+                            vệ môi trường, giảm thiểu ô
+                            nhiễm và lan tỏa lối sống xanh. Rác thải được bán tái chế, kinh phí tái đầu tư cây giống, hỗ
+                            trợ cộng đồng.</p>
+                        <a href="http://tinhdoanhungyen.org.vn/doan-thanh-nien/ban-thuong-vu-tinh-doan-trien-khai-mo-hinh-doi-cay-xanh-lay-rac-thai-nhua-nam-2021.html"
+                            target="_sefl" class="read-more">Đọc tin tức →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://media.anhp.vn/files/2023/03z4213245305474_979148aa0734113dc716748035ccb122.jpg" alt="Cuộc thi sáng tạo" class="card-img">
+                    <div class="card-content">
+                        <h3>🏆 Cuộc thi Sáng tạo Xanh</h3>
+                        <p>Sáng tạo xanh (Green Innovation) là việc tạo ra, phát triển và áp dụng các sản phẩm, quy
+                            trình, dịch vụ hoặc mô hình
+                            kinh doanh mới, nhằm giảm thiểu tác động tiêu cực đến môi trường, tiết kiệm tài nguyên và
+                            bảo vệ hệ sinh thái. Mục tiêu
+                            của đổi mới sáng tạo xanh là hài hòa phát triển kinh tế - xã hội bền vững và bảo vệ môi
+                            trường.</p>
+                        <a href="https://www.anhp.vn/soi-noi-cuoc-thi-sang-tao-san-pham-thoi-trang-tai-che-vi-moi-truong-d52685.html"
+                            target="_sefl" class="read-more">Đọc tin tức →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="margin-top: 60px;">
+            <h2 class="section-title">Liên Hệ Với GreenSchool</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label>Họ và tên</label>
+                        <input type="text" placeholder="Nhập tên của bạn..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Lời nhắn</label>
+                        <textarea rows="4" placeholder="Bạn muốn đóng góp sáng kiến gì?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Gửi thông điệp</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dự án Trường Học Xanh. Hành động nhỏ - Ý nghĩa lớn.</p>
+        <p>Email: lienhe@truonghocxanh.edu.vn</p>
+    </footer>
+</body>
+
+</html>
